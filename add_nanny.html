@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de recommandation de nounous</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+<h1>Système de recommandation de nounous</h1>
+
+<button id="openFormButton">Ajouter une nouvelle nounou</button>
+
+<div id="nannyFormPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button" id="closeFormButton">&times;</span>
+        <h2>Ajouter une nouvelle nounou</h2>
+        <form id="addNannyForm">
+            <div>
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="skills">Compétences (séparées par des virgules) :</label>
+                <input type="text" id="skills" name="skills" required>
+            </div>
+            <div>
+                <label for="experience">Expérience (années) :</label>
+                <input type="number" id="experience" name="experience" required>
+            </div>
+            <div>
+                <label for="rating">Évaluation (étoiles) :</label>
+                <div id="rating" class="rating">
+                    <span class="star" data-value="1">☆</span>
+                    <span class="star" data-value="2">☆</span>
+                    <span class="star" data-value="3">☆</span>
+                    <span class="star" data-value="4">☆</span>
+                    <span class="star" data-value="5">☆</span>
+                </div>
+            </div>
+            <button type="submit">Ajouter la nounou</button>
+        </form>
+    </div>
+</div>
+
+<section>
+    <h2>Nounous recommandées</h2>
+    <ul id="nannyList"></ul>
+</section>
+
+<!-- Chat Button and Window -->
+<div id="chatButton">Chat</div>
+<div id="chatWindow">
+    <div id="chatHeader">Chat</div>
+    <div id="chatBody">
+        <p>Bienvenue dans le chat ! Demandez-moi comment trouver la meilleure nounou.</p>
+    </div>
+    <input type="text" id="chatInput" placeholder="Tapez votre message ici...">
+</div>
+
+<script src="./js/scripts.js"></script>
+</body>
+</html>
